@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начальная страница</title>
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать!</h1>
+        <div class="articles">
+            <h2>Статьи:</h2>
+            {{range .Articles}}
+                <a href="/article?id={{.ID}}">{{.Title}}</a>
+            {{end}}
+        </div>
+        <div class="pagination">
+            {{if .Pagination.HasPrev}}
+            <a href="/?id={{.Pagination.PrevPage}}">Предыдущая</a>
+            {{end}}
+            {{if .Pagination.HasNext}}
+                <a href="/?id={{.Pagination.NextPage}}">Следующая</a>
+            {{end}}
+        </div>
+    </div>
+</body>
+</html>

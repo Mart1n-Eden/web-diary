@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  db:
+    build: ./base
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+  app:
+    build: ./
+    ports:
+      - "8888:8888"
+    depends_on:
+      - db
+
+volumes:
+  db-data:

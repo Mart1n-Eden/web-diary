@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Твори, шеф</title>
+    <link rel="stylesheet" href="/static/css/admin.css">
+</head>
+<body>
+    <a href="/" class="btn-back">На главную</a>
+    <div class="container">
+        <h2>Твори, шеф</h2>
+        <form action="/save" method="post">
+            <div class="form-group">
+                <label for="title">Заголовок:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="content">Содержание:</label>
+                <textarea id="content" name="content" required></textarea>
+            </div>
+            <button type="submit" class="btn">Опубликовать</button>
+        </form>
+    </div>
+</body>
+</html>
