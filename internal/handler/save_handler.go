@@ -14,7 +14,6 @@ func SaveHandler(w http.ResponseWriter, r *http.Request) {
 
 	if r.Method == http.MethodPost {
 		a := model.Article{Title: r.FormValue("title"), Body: []byte(r.FormValue("content"))}
-		// a.save()
 		database.SaveArticle(a)
 		template.Tpl_admin.Execute(w, nil)
 	}

@@ -11,8 +11,6 @@ func AdminHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	if r.Method == http.MethodPost {
-		// println("!@#!@#@!#!@#")
-		// println("!@#!@#@!#!@#")
 		username := r.FormValue("username")
 		password := r.FormValue("password")
 
