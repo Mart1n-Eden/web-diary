@@ -1,0 +1,142 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/static/amazing_logo.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.container {
+  max-width: 600px;
+  margin: 10% auto;
+  position: relative;
+  left: -400px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-container {
+  width: 300px;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(3deg);
+}
+
+.admin-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: rotate(3deg);
+}
+
+h1 {
+  margin-bottom: 50px;
+  font-size: 86px;
+  color: #57637b;
+}
+
+h2 {
+  margin-bottom: 50px;
+  font-size: 36px;
+  color: #57637b;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 75%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+}
+
+.form-group textarea {
+  height: 200px;
+}
+
+.btn, .btn-back {
+  margin: 0 auto;
+  padding: 15px 30px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 18px;
+}
+
+.btn:hover, .btn-back:hover {
+  background-color: #45a049;
+}
+
+.logo {
+  display: block;
+  margin: 20px auto;
+  width: 200px;
+}
+
+.admin-container .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.pagination {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-right: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+}
+
+.articles {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.articles a {
+  display: block;
+  margin-bottom: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  margin-left: 10px;
+}

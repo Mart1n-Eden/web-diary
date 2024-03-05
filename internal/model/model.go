@@ -1,7 +1,8 @@
 package model
 
 import (
-	"fmt"
+	"os"
+	"strings"
 	"github.com/gomarkdown/markdown"
 	_ "github.com/gomarkdown/markdown/ast"
 	"github.com/gomarkdown/markdown/html"
@@ -36,8 +37,13 @@ func (p *Article) Gluing() []byte {
 	opts := html.RendererOptions{Flags: htmlFlags}
 	renderer := html.NewRenderer(opts)
 
-	page := []byte(fmt.Sprintf("<!DOCTYPE html><html lang=\"en\"> <head> <meta charset=\"UTF-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <title>Заголовок вашей страницы</title> </head> <body> <header> <h1>%s</h1> </header> </body> </html>", p.Title))
-	page = append(page, markdown.Render(doc, renderer)...)
+	page, err := os.ReadFile("./view/article.html")
+	if err != nil {
+		panic(err)
+	}
+
+	page = []byte(strings.ReplaceAll(string(page), "{{.Title}}", p.Title))
+	page = []byte(strings.ReplaceAll(string(page), "<!-- article -->", string(markdown.Render(doc, renderer))))
 
 	return page
 }

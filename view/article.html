@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя HTML Страница</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/static/amazing_logo.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #57637b;
+        }
+        p, strong, a,code {
+            color: #79a555;
+        }
+        .button {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 18px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>{{.Title}}</h1>
+    <a href="/">
+      <button class="button">Home page</button>
+    </a>
+</div>
+
+<!-- article -->
+
+</body>
+</html>

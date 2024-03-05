@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Начальная страница</title>
-    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Добро пожаловать!</h1>
+        <h1>Web Diary</h1>
         <div class="articles">
-            <h2>Статьи:</h2>
+            <h2>Thoughts:</h2>
             {{range .Articles}}
                 <a href="/article?id={{.ID}}">{{.Title}}</a>
             {{end}}
         </div>
         <div class="pagination">
             {{if .Pagination.HasPrev}}
-            <a href="/?id={{.Pagination.PrevPage}}">Предыдущая</a>
+            <a href="/?id={{.Pagination.PrevPage}}">&#8592;</a>
             {{end}}
             {{if .Pagination.HasNext}}
-                <a href="/?id={{.Pagination.NextPage}}">Следующая</a>
+                <a href="/?id={{.Pagination.NextPage}}">&#8594;</a>
             {{end}}
         </div>
     </div>
