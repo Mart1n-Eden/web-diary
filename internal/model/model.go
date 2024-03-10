@@ -43,7 +43,8 @@ func (p *Article) Gluing() []byte {
 	}
 
 	page = []byte(strings.ReplaceAll(string(page), "{{.Title}}", p.Title))
-	page = []byte(strings.ReplaceAll(string(page), "<!-- article -->", string(markdown.Render(doc, renderer))))
+	body := "<pre>" + string(markdown.Render(doc, renderer)) + "</pre>"
+	page = []byte(strings.ReplaceAll(string(page), "<!-- article -->", body))
 
 	return page
 }

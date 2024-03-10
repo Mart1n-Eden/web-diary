@@ -20,7 +20,7 @@ func Run() {
 	mux.HandleFunc("/save", handler.SaveHandler)
 	mux.HandleFunc("/article", handler.ArticleHandler)
 
-	http.ListenAndServe(":8888", mux)
+	http.ListenAndServe("0.0.0.0:8888", mux)
 
 	go func() {
 		if err := http.ListenAndServe(":8888", mux); err != nil {
